@@ -6,7 +6,13 @@
 </head>
 <body>
     <script>
-        console.log ("Hello WOrld!")
+        console.log ("Hello World!")
+        function computerPlay (){
+            const RPS_Array = ["Rock", "Paper", "Scissors"];
+            const RPS_Pick = RPS_Array[Math.floor(Math.random()*(RPS_Array.length))];
+            return(RPS_Pick);
+        }
+        console.log (computerPlay())
     </script>
 </body>
-</html>DOCTYPE
+</html>
