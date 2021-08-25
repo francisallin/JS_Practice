@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Function practice
+    </title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+    <script>
+        let originalNumber = parseFloat (prompt ("Give me a number and I will add 7 to it"))            
+        function add7 (n){
+            n+= 7 ;
+            return n;
+        }
+        console.log (add7 (originalNumber));
+
+        function multiply (a, b){
+            let product =a*b;
+            return product;
+        }
+        console.log (multiply (3,4));
+
+        let originalString = prompt ("Give me a string to capitalize the first letter")
+        function capitalize (){
+            let slicedOriginalString = originalString.slice (1);
+            let capitalizedFirstLetter = originalString.charAt(0).toUpperCase();
+            let capitalizedString = capitalizedFirstLetter + slicedOriginalString;
+            return capitalizedString;
+        }
+        console.log (capitalize ());
+
+        let str = prompt ("Give me a string to return the last letter to you");
+        function lastLetter (){
+            let length = str.length;
+            return endingLetter = str.charAt(length-1);
+        }
+        console.log (lastLetter());
+    </script>
+    
+</body>
+</html>
