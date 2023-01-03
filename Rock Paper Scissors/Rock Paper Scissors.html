@@ -3,61 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Rock Paper Scissors</title>
+    <script src="rps.js" defer></script>
 </head>
 <body>
-    <script>
-        var playerCounter = 0, computerCounter = 0;
-    
-        function game (){
-        const playerInput = prompt ("Please type rock, paper or scissors");
-        const playerLowerCase = playerInput.toLowerCase();
-        const playerSelection = playerLowerCase[0].toUpperCase()+playerLowerCase.substring(1);
+    <button id="Rock">Rock</button> <br>
+    <button id="Paper">Paper</button> <br>
+    <button id="Scissors">Scissors</button>
 
-        function computerPlay (){
-            const RPS_Array = ["Rock", "Paper", "Scissors"];
-            const RPS_Pick = RPS_Array[Math.floor(Math.random()*(RPS_Array.length))];
-            return(RPS_Pick);
-        }
-        const computerSelection = computerPlay();
-
-        console.log (playerSelection, computerSelection);
-
-        function playRound () {
-            if (computerSelection == playerSelection){
-                alert ("Draw!");
-                playerCounter++, computerCounter++;
-            }
-            else if ((computerSelection == 'Rock' && playerSelection == 'Paper') 
-            || (computerSelection == 'Paper' && playerSelection == 'Scissors') 
-            || (computerSelection == 'Scissors' && playerSelection == 'Rock')){
-                alert ("Congratulations, you win this round!");
-                playerCounter++;
-            }   
-            else {
-                alert ("Sorry, you lose this round!");
-                computerCounter++;
-            }
-        }
-        
-        playRound ();
-    }
-
-    for (let i=0; i<5; i++){
-        game();
-    }
-    function finalMessage(){
-    if (playerCounter > computerCounter) {
-        alert ("Congratulations, you win this game!");
-    }
-    else if (playerCounter < computerCounter){
-        alert ("Sorry, you lose this game!");
-    }
-    else {
-        alert ("This game is a draw!");
-    }}
-
-    finalMessage ();
-
-    </script>
 </body>
 </html>
